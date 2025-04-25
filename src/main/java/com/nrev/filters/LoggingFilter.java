@@ -12,8 +12,16 @@ public class LoggingFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws ServletException, IOException {
-        System.out.println("Incoming request: " + req.getRemoteAddr());
+        System.out.println("Request received from: " + req.getRemoteAddr());
+        System.out.println("Processing...");
+        long startTime = System.currentTimeMillis();
+
         chain.doFilter(req,res);
+
+        long endTime = System.currentTimeMillis();
+
+        System.out.println("Response sent to: " + req.getRemoteAddr());
+        System.out.println("Response processed in " + (endTime - startTime) + "ms");
     }
 
     @Override

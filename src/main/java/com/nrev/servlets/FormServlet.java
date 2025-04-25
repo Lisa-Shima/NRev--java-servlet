@@ -1,4 +1,4 @@
-package com.nrev.servlet;
+package com.nrev.servlets;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;

@@ -11,7 +11,7 @@
 
   <servlet>
     <servlet-name>HelloServlet</servlet-name>
-    <servlet-class>com.nrev.servlet.HelloServlet</servlet-class>
+    <servlet-class>com.nrev.servlets.HelloServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>HelloServlet</servlet-name>
@@ -20,7 +20,7 @@
 
   <servlet>
     <servlet-name>FormServlet</servlet-name>
-    <servlet-class>com.nrev.servlet.FormServlet</servlet-class>
+    <servlet-class>com.nrev.servlets.FormServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>FormServlet</servlet-name>
@@ -29,10 +29,20 @@
   
   <servlet>
     <servlet-name>GreetServlet</servlet-name>
-    <servlet-class>com.nrev.servlet.GreetServlet</servlet-class>
+    <servlet-class>com.nrev.servlets.GreetServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>GreetServlet</servlet-name>
     <url-pattern>/greet</url-pattern>
   </servlet-mapping>
+
+
+  <filter>
+    <filter-name>LoggingFilter</filter-name>
+    <filter-class>com.nrev.filters.LoggingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoggingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
 </web-app>

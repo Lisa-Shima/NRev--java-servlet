@@ -38,7 +38,7 @@
   
   <servlet>
     <servlet-name>TestServlet</servlet-name>
-    <servlet-class>com.nrev.TestServlet</servlet-class>
+    <servlet-class>com.nrev.servlets.TestServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>TestServlet</servlet-name>
@@ -88,4 +88,9 @@
     <exception-type>java.lang.RuntimeException</exception-type>
     <location>/500.html</location>
   </error-page>
+  
+  
+  <listener>
+    <listener-class>com.nrev.listeners.ActiveSessionListener</listener-class>
+  </listener>
 </web-app>

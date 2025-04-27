@@ -35,6 +35,15 @@
     <servlet-name>GreetServlet</servlet-name>
     <url-pattern>/greet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.nrev.TestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/testError</url-pattern>
+  </servlet-mapping>
 
 
   <filter>
@@ -63,4 +72,20 @@
     <filter-name>AuthFilter</filter-name>
     <url-pattern>/protected/*</url-pattern>
   </filter-mapping>
+
+
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.html</location>
+  </error-page>
+
+  <error-page>
+    <error-code>500</error-code>
+    <location>/500.html</location>
+  </error-page>
+
+  <error-page>
+    <exception-type>java.lang.RuntimeException</exception-type>
+    <location>/500.html</location>
+  </error-page>
 </web-app>

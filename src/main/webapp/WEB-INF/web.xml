@@ -93,4 +93,8 @@
   <listener>
     <listener-class>com.nrev.listeners.ActiveSessionListener</listener-class>
   </listener>
+  
+  <listener>
+    <listener-class>com.nrev.listeners.AppLifecycleLogger</listener-class>
+  </listener>
 </web-app>

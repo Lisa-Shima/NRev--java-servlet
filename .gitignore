@@ -11,6 +11,7 @@ target/
 *.iws
 *.iml
 *.ipr
+src/main/java/com/nrev/util
 
 ### Eclipse ###
 .apt_generated
